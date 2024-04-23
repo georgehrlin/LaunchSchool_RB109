@@ -1,7 +1,9 @@
-a = [1, 2, 3, 3]
-b = a
-c = a.uniq
+def change_name(name)
+  name = 'bob' # does this reassignment change the object outside the method?
+end
 
-p a.object_id
-p b.object_id
-p c.object_id
+p name = 'jim'
+
+p change_name(name)
+
+puts name
