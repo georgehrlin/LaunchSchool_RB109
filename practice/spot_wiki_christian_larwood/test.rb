@@ -1,8 +1,7 @@
-def fix(value)
-  value = value.upcase!
-  value.concat('!')
+def add_name(arr, name)
+  arr = arr << name
 end
 
-s = 'hello'
-
-t = fix(s)
+names = ['bob', 'kim']
+add_name(names, 'jim')
+puts names
