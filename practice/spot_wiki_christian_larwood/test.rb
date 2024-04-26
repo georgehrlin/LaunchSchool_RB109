@@ -1,7 +1,11 @@
-arr = [1, 2, 3, 4, 5]
-
-new_array = arr.map do |n|
-  n > 1
+def test
+  puts "written assessment"
 end
 
-p new_array
+var = test
+
+if var
+  puts "written assessment"
+else
+  puts "interview"
+end
