@@ -1,21 +1,12 @@
-a = ["foo", "bar", "baz"]
-b = a
-c = b[0]         # c points to "foo"
+# Let's ignore for now how Ruby actually works.
+# Just focus on this one example of Ruby's behaviour.
 
-p b[0].object_id
-p b[0].object_id
-p b[0].object_id
+# In this example, Ruby behaves as if it is pass-by-value:
+def change_name(name)
+  name = 'alice'
+end
 
-a[0].upcase!     # a points to ["FOO", "BAR", "BAZ"]
-
-c[0].downcase!
-# c[0] is b[0][0], which is "F" (before downcase!)
-# After downcase!, "f" is returned
-# The hash remains the same after downcase! because when [] is called on a string, it returns a new string
-
-p c[0].object_id
-p c[0].object_id
-p c[0].object_id
-
-p c # Output: 
-p b # Ouput: ["FOO", "BAR", "BAZ"]
+my_name = 'bob'
+change_name(my_name)
+puts my_name
+# Output: bob
